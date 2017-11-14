@@ -33,6 +33,7 @@ gulp.task('clean', function () {
 gulp.task('build', [
     'build-vendor-js',
     'build-vendor-styles',
+    'build-vendor-fonts',
     'build-src',
     'build-html',
     'build-pages',
@@ -53,6 +54,11 @@ gulp.task('build-vendor-js', function () {
         .pipe(gulp.dest('dist/js'));
 });
 
+/*
+ * 功能说明: 构建样式
+ * @author: wangjp
+ * @Date: 2017-11-14 15:35
+ */
 gulp.task('build-vendor-styles', function () {
 
     return gulp.src(conf.styles)
@@ -60,6 +66,17 @@ gulp.task('build-vendor-styles', function () {
 
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css'));
+});
+
+/*
+ * 功能说明: 构建 fonts
+ * @author: wangjp
+ * @Date: 2017-11-14 15:34
+ */
+gulp.task('build-vendor-fonts', function () {
+
+    return gulp.src(conf.fonts)
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 /*
@@ -71,6 +88,7 @@ gulp.task('build-src', function () {
     return gulp.src([
         'src/app/app.js',
         'src/app/config/**',
+        'src/app/services/**',
         'src/app/controllers/**'
     ]).pipe(concat('app.min.js'))
       .pipe(uglify())

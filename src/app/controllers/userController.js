@@ -4,7 +4,7 @@
  * @author: wangjp
  * @Date: 2017-11-13 22:23
  */
-training.controller('UserController', ['$scope', function ($scope) {
+training.controller('UserController', ['$scope', 'UserService', function ($scope, UserService) {
     $scope.users = [{
         id: 1,
         name: '吕布',
@@ -18,4 +18,7 @@ training.controller('UserController', ['$scope', function ($scope) {
         name: '典韦',
         age: 30
     }];
+
+
+    UserService.list();
 }]);

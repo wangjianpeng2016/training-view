@@ -1,5 +1,10 @@
+'use strict';
 
-
+/*
+ * 功能说明: 设置系统路由
+ * @author: wangjp
+ * @Date: 2017-11-14 15:14
+ */
 training.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
 
     $urlRouterProvider.otherwise('/index');

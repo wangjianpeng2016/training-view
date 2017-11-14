@@ -13,6 +13,7 @@
  */
 var training = angular.module('training', [
     'ui.router',
+    'ngResource',
     'ui.bootstrap'
 ]);
 

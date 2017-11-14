@@ -12,9 +12,13 @@ module.exports = {
         'node_modules/angular/angular.js',
         'node_modules/angular-ui-router/release/angular-ui-router.js',
         'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+        'node_modules/angular-resource/angular-resource.js',
         'node_modules/bootstrap/dist/js/bootstrap.js'
     ],
     'styles': [
         'node_modules/bootstrap/dist/css/bootstrap.css'
+    ],
+    'fonts': [
+        'node_modules/bootstrap/dist/fonts/**'
     ]
 };
