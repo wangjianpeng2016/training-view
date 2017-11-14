@@ -88,6 +88,7 @@ gulp.task('build-src', function () {
     return gulp.src([
         'src/app/app.js',
         'src/app/config/**',
+        'src/app/common/**',
         'src/app/services/**',
         'src/app/controllers/**'
     ]).pipe(concat('app.min.js'))

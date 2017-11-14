@@ -5,7 +5,7 @@
  * @author: wangjp
  * @Date: 2017-11-14 15:28
  */
-training.service('UserService', ['BaseConstant', function (BaseConstant) {
+training.service('UserService', ['BaseConstant', 'BaseService', function (BaseConstant, BaseService) {
 
     /*
      * 功能说明: 定义一个服务对象
@@ -22,7 +22,10 @@ training.service('UserService', ['BaseConstant', function (BaseConstant) {
      * @Date: 2017-11-14 15:30
      */
     service.list = function () {
-        console.log('BaseConstant: '+BaseConstant.basePath);
+
+        return BaseService.single({
+            'url': BaseConstant.basePath+'heroUserController/list'
+        });
     };
 
     return service;

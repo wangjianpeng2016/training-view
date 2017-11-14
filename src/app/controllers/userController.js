@@ -20,5 +20,9 @@ training.controller('UserController', ['$scope', 'UserService', function ($scope
     }];
 
 
-    UserService.list();
+    UserService.list().then(function(data){
+
+        console.log(data);
+    });
+
 }]);
