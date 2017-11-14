@@ -5,5 +5,17 @@
  * @Date: 2017-11-13 22:23
  */
 training.controller('UserController', ['$scope', function ($scope) {
-    $scope.name = '赵云222';
+    $scope.users = [{
+        id: 1,
+        name: '吕布',
+        age: 10
+    }, {
+        id: 2,
+        name: '赵云',
+        age: 20
+    }, {
+        id: 3,
+        name: '典韦',
+        age: 30
+    }];
 }]);

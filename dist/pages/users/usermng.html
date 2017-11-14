@@ -1,0 +1,16 @@
+<div class="row" ng-controller="UserController">
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="list-group">
+                    <a ui-sref="#" class="list-group-item active">用户分类</a>
+                    <a ui-sref="index.usermng.userlist" class="list-group-item" ng-click="userListType()">用户列表</a>
+                    <a ui-sref="index.usermng.blacklist" class="list-group-item">黑名单</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div ui-view></div>
+    </div>
+</div>
