@@ -23,9 +23,11 @@ training.service('UserService', ['BaseConstant', 'BaseService', function (BaseCo
      */
     service.list = function () {
 
-        return BaseService.single({
+
+        return BaseService.ajax({
             'url': BaseConstant.basePath+'heroUserController/list'
-        });
+        })
+
     };
 
     return service;

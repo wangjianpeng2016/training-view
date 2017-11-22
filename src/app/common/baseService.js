@@ -11,11 +11,11 @@ training.service('BaseService', ['$q', '$resource', '$http', function($q, $resou
     var result = {};
 
     //获取列表
-    result.list = function(url, param){
+    result.list = function(param){
         var deferred = $q.defer();
         var promise = deferred.promise;
 
-        var resource = $resource(url, param ,{getList:{method:'POST',isArray:true}});
+        var resource = $resource(param.url, param.data ,{getList:{method:'POST',isArray:true}});
 
         resource.getList(function(data) {
             deferred.resolve(data);
@@ -48,10 +48,6 @@ training.service('BaseService', ['$q', '$resource', '$http', function($q, $resou
             method:'POST',
             url: param.url,
             data: param.data
-        }).then(function successCallback(response) {
-            console.log('成功了');
-        }, function errorCallback(response) {
-            console.log('失败了');
         });
 
         return promise;

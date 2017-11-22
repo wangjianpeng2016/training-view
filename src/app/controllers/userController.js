@@ -20,9 +20,10 @@ training.controller('UserController', ['$scope', 'UserService', function ($scope
     }];
 
 
-    UserService.list().then(function(data){
-
-        console.log(data);
+    UserService.list().then(function successCallback(response) {
+        console.log(response.data);
+    }, function errorCallback(data) {
+        console.log('失败了');
     });
 
 }]);
